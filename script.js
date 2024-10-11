@@ -3,9 +3,9 @@ let gridSize = 16;
 const button = document.querySelector("button");
 
 button.addEventListener("click", () => {
-    gridSize = prompt("All grids are square. Choose grid size between 1 to 100.");
-    if (gridSize > 100) {
-        gridSize = prompt ("That's too big. Try a smaller number.");
+    gridSize = prompt("All grids are square. Choose grid length between 1 to 100.");
+    if (gridSize > 100 || gridSize < 1 || (Number.isInteger(parseInt(gridSize)) == false)) {
+        gridSize = prompt ("You didn't follow the instructions. Choose grid length between 1 to 100.");
     }
     while (container.firstChild) {
         container.firstChild.remove();

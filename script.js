@@ -4,6 +4,9 @@ const button = document.querySelector("button");
 
 button.addEventListener("click", () => {
     gridSize = prompt("All grids are square. Choose grid size between 1 to 100.");
+    if (gridSize > 100) {
+        gridSize = prompt ("That's too big. Try a smaller number.");
+    }
     while (container.firstChild) {
         container.firstChild.remove();
     }

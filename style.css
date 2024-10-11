@@ -1,0 +1,23 @@
+/* style.css */
+
+#container {
+    border: 1px solid red;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: white;
+    flex-grow: 1;
+}
+
+.box2 {
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: black;
+    flex-grow: 1;
+}

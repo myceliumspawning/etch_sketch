@@ -17,19 +17,19 @@ const container = document.querySelector("#container");
 
 function cloneGrid() {
     for (let i = 1; i <= (gridSize * gridSize); i++) {
-        const box = document.createElement("div");
+        const box = document.createElement("div.box");
         box.style.width = 500/gridSize + "px";
         box.style.height = 500/gridSize + "px";
         box.setAttribute("class", "box");
         container.appendChild(box);
 
-        box.addEventListener("mouseover", () => {
-        box.setAttribute("class", "box2");
+        container.addEventListener("mouseover", (event) => {
+            if(event.target.tagName === "DIV.BOX") {
+                let randomColor = Math.floor(Math.random()*16777215).toString(16);
+                event.target.style.backgroundColor = "#" + randomColor; 
+            }
         });
     }
 }
 
 cloneGrid();
-
-
-
